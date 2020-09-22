@@ -1,0 +1,11 @@
+components:
+- name: example_sssp_no_eval
+  type: app
+  yaml: example_sssp/example_sssp_no_eval.yaml
+- name: example_sssp_invalid_yaml
+  type: app
+  yaml: example_sssp/example_sssp_invalid_yaml.yaml
+  - name: example_sssp_with_exception
+  type: app
+  yaml: example_sssp/example_sssp_with_exception.yaml
+format: 0.1
