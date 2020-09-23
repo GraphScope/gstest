@@ -1,10 +1,10 @@
-teacher_id lesson times
-0 Math 48
-1 Math 36
-2 Eng 24
-3 Geog 64
-4 History 24
-5 Biology 90
-6 Biology 72
-7 Chemistry 54
-8 Chemistry 12
+teacher_id,lesson,times
+0,Math,48
+1,Math,36
+2,Eng,24
+3,Geog,64
+4,History,24
+5,Biology,90
+6,Biology,72
+7,Chemistry,54
+8,Chemistry,12
