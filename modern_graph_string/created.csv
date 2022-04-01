@@ -1,0 +1,5 @@
+src_id|dst_id|weight
+i1|i3|0.4
+i4|i5|1.0
+i4|i3|0.4
+i6|i3|0.2
