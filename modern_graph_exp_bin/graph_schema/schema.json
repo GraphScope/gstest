@@ -1,0 +1,62 @@
+{
+  "vertex_type_map": {
+    "person": 0,
+    "software": 1
+  },
+  "edge_type_map": {
+    "created": 1,
+    "knows": 0
+  },
+  "vertex_prop": {
+    "person": [
+      [
+        "id",
+        "ID"
+      ],
+      [
+        "name",
+        "String"
+      ],
+      [
+        "age",
+        "Integer"
+      ]
+    ],
+    "software": [
+      [
+        "id",
+        "ID"
+      ],
+      [
+        "name",
+        "String"
+      ],
+      [
+        "lang",
+        "String"
+      ]
+    ]
+  },
+  "edge_prop": {
+    "created": [
+      [
+        "edge_id",
+        "ID"
+      ],
+      [
+        "weight",
+        "Double"
+      ]
+    ],
+    "knows": [
+      [
+        "edge_id",
+        "ID"
+      ],
+      [
+        "weight",
+        "Double"
+      ]
+    ]
+  }
+}
