@@ -12,5 +12,5 @@ property_groups:
         is_primary: false
       - name: id
         data_type: int64
-        is_primary: false
+        is_primary: true
 version: gar/v1
