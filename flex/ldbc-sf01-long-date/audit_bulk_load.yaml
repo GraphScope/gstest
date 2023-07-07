@@ -1,0 +1,161 @@
+graph:
+  vertex:
+    - label_name: PLACE
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/place_0_0.csv
+          format: standard_csv
+    - label_name: PERSON
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_0_0.csv
+          format: standard_csv
+    - label_name: COMMENT
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_0_0.csv
+          format: standard_csv
+    - label_name: POST
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_0_0.csv
+          format: standard_csv
+    - label_name: FORUM
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_0_0.csv
+          format: standard_csv
+    - label_name: ORGANISATION
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/organisation_0_0.csv
+          format: standard_csv
+    - label_name: TAGCLASS
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tagclass_0_0.csv
+          format: standard_csv
+    - label_name: TAG
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tag_0_0.csv
+          format: standard_csv
+  edge:
+    - src_label_name: COMMENT
+      dst_label_name: PERSON
+      edge_label_name: HASCREATOR
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_hasCreator_person_0_0.csv
+          format: standard_csv
+    - src_label_name: POST
+      dst_label_name: PERSON
+      edge_label_name: HASCREATOR
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_hasCreator_person_0_0.csv
+          format: standard_csv
+    - src_label_name: POST
+      dst_label_name: TAG
+      edge_label_name: HASTAG
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_hasTag_tag_0_0.csv
+          format: standard_csv
+    - src_label_name: COMMENT
+      dst_label_name: COMMENT
+      edge_label_name: REPLYOF
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_replyOf_comment_0_0.csv
+          format: standard_csv
+    - src_label_name: COMMENT
+      dst_label_name: POST
+      edge_label_name: REPLYOF
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_replyOf_post_0_0.csv
+          format: standard_csv
+    - src_label_name: FORUM
+      dst_label_name: POST
+      edge_label_name: CONTAINEROF
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_containerOf_post_0_0.csv
+          format: standard_csv
+    - src_label_name: FORUM
+      dst_label_name: PERSON
+      edge_label_name: HASMEMBER
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_hasMember_person_0_0.csv
+          format: standard_csv
+    - src_label_name: FORUM
+      dst_label_name: PERSON
+      edge_label_name: HASMODERATOR
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_hasModerator_person_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: TAG
+      edge_label_name: HASINTEREST
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_hasInterest_tag_0_0.csv
+          format: standard_csv
+    - src_label_name: COMMENT
+      dst_label_name: PLACE
+      edge_label_name: ISLOCATEDIN
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_isLocatedIn_place_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: PLACE
+      edge_label_name: ISLOCATEDIN
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_isLocatedIn_place_0_0.csv
+          format: standard_csv
+    - src_label_name: POST
+      dst_label_name: PLACE
+      edge_label_name: ISLOCATEDIN
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_isLocatedIn_place_0_0.csv
+          format: standard_csv
+    - src_label_name: ORGANISATION
+      dst_label_name: PLACE
+      edge_label_name: ISLOCATEDIN
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/organisation_isLocatedIn_place_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: PERSON
+      edge_label_name: KNOWS
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_knows_person_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: COMMENT
+      edge_label_name: LIKES
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_likes_comment_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: POST
+      edge_label_name: LIKES
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_likes_post_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: ORGANISATION
+      edge_label_name: WORKAT
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_workAt_organisation_0_0.csv
+          format: standard_csv
+    - src_label_name: PLACE
+      dst_label_name: PLACE
+      edge_label_name: ISPARTOF
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/place_isPartOf_place_0_0.csv
+          format: standard_csv
+    - src_label_name: TAG
+      dst_label_name: TAGCLASS
+      edge_label_name: HASTYPE
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tag_hasType_tagclass_0_0.csv
+          format: standard_csv
+    - src_label_name: TAGCLASS
+      dst_label_name: TAGCLASS
+      edge_label_name: ISSUBCLASSOF
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tagclass_isSubclassOf_tagclass_0_0.csv
+          format: standard_csv
+    - src_label_name: PERSON
+      dst_label_name: ORGANISATION
+      edge_label_name: STUDYAT
+      files:
+        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_studyAt_organisation_0_0.csv
+          format: standard_csv
