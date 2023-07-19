@@ -147,6 +147,12 @@
   ],
   "edge": [
     {
+      "src_label": "POST",
+      "dst_label": "PERSON",
+      "label": "HASCREATOR",
+      "oe_strategy": "Single"
+    },
+    {
       "src_label": "COMMENT",
       "dst_label": "PERSON",
       "label": "HASCREATOR",
@@ -154,22 +160,16 @@
     },
     {
       "src_label": "POST",
-      "dst_label": "PERSON",
-      "label": "HASCREATOR",
-      "oe_strategy": "Single"
+      "dst_label": "TAG",
+      "label": "HASTAG"
+    },
+    {
+      "src_label": "COMMENT",
+      "dst_label": "TAG",
+      "label": "HASTAG"
     },
     {
       "src_label": "FORUM",
-      "dst_label": "TAG",
-      "label": "HASTAG"
-    },
-    {
-      "src_label": "POST",
-      "dst_label": "TAG",
-      "label": "HASTAG"
-    },
-    {
-      "src_label": "COMMENT",
       "dst_label": "TAG",
       "label": "HASTAG"
     },
@@ -181,13 +181,13 @@
     },
     {
       "src_label": "COMMENT",
-      "dst_label": "POST",
+      "dst_label": "COMMENT",
       "label": "REPLYOF",
       "oe_strategy": "Single"
     },
     {
       "src_label": "COMMENT",
-      "dst_label": "COMMENT",
+      "dst_label": "POST",
       "label": "REPLYOF",
       "oe_strategy": "Single"
     },
@@ -227,6 +227,11 @@
     {
       "src_label": "PERSON",
       "dst_label": "COMMENT",
+      "label": "LIKES"
+    },
+    {
+      "src_label": "PERSON",
+      "dst_label": "POST",
       "label": "LIKES"
     },
     {
