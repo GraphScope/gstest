@@ -1,18 +1,13 @@
 {
   "vertex_type_map": {
-    "CITY": 9,
     "COMMENT": 2,
-    "COMPANY": 11,
-    "CONTINENT": 10,
-    "COUNTRY": 8,
     "FORUM": 4,
     "ORGANISATION": 5,
     "PERSON": 1,
     "PLACE": 0,
     "POST": 3,
     "TAG": 7,
-    "TAGCLASS": 6,
-    "UNIVERSITY": 12
+    "TAGCLASS": 6
   },
   "edge_type_map": {
     "CONTAINEROF": 5,
@@ -32,20 +27,6 @@
     "WORKAT": 16
   },
   "vertex_prop": {
-    "CITY": [
-      [
-        "id",
-        "ID"
-      ],
-      [
-        "name",
-        "String"
-      ],
-      [
-        "url",
-        "String"
-      ]
-    ],
     "COMMENT": [
       [
         "id",
@@ -72,48 +53,6 @@
         "Integer"
       ]
     ],
-    "COMPANY": [
-      [
-        "id",
-        "ID"
-      ],
-      [
-        "name",
-        "String"
-      ],
-      [
-        "url",
-        "String"
-      ]
-    ],
-    "CONTINENT": [
-      [
-        "id",
-        "ID"
-      ],
-      [
-        "name",
-        "String"
-      ],
-      [
-        "url",
-        "String"
-      ]
-    ],
-    "COUNTRY": [
-      [
-        "id",
-        "ID"
-      ],
-      [
-        "name",
-        "String"
-      ],
-      [
-        "url",
-        "String"
-      ]
-    ],
     "FORUM": [
       [
         "id",
@@ -132,6 +71,10 @@
       [
         "id",
         "ID"
+      ],
+      [
+        "type",
+        "String"
       ],
       [
         "name",
@@ -188,6 +131,10 @@
       [
         "url",
         "String"
+      ],
+      [
+        "type",
+        "String"
       ]
     ],
     "POST": [
@@ -239,20 +186,6 @@
       ]
     ],
     "TAGCLASS": [
-      [
-        "id",
-        "ID"
-      ],
-      [
-        "name",
-        "String"
-      ],
-      [
-        "url",
-        "String"
-      ]
-    ],
-    "UNIVERSITY": [
       [
         "id",
         "ID"
