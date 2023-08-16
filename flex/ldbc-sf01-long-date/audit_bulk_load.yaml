@@ -2,268 +2,246 @@ graph: ldbc_snb
 loading_config:
   data_source: file  # could be file, oss, s3, hdfs, currently only support file
 #  data_location: # specify it or use FLEX_DATA_DIR env.
+  format: csv
   method: init
   meta_data:
     delimiter: "|"
 vertex_mappings:
   - type_name: PLACE
     inputs:
-      - path: place_0_0.csv
-        format: standard_csv
+      - place_0_0.csv
   - type_name: PERSON 
     inputs:
-      - path: person_0_0.csv
-        format: standard_csv
+      - person_0_0.csv
   - type_name: COMMENT
     inputs:
-      - path: comment_0_0.csv
-        format: standard_csv
+      - comment_0_0.csv
   - type_name: POST
     inputs:
-      - path: post_0_0.csv
-        format: standard_csv
+      - post_0_0.csv
   - type_name: FORUM
     inputs:
-      - path: forum_0_0.csv
-        format: standard_csv
+      - forum_0_0.csv
   - type_name: ORGANISATION
     inputs:
-      - path: organisation_0_0.csv
-        format: standard_csv
+      - organisation_0_0.csv
   - type_name: TAGCLASS
     inputs:
-      - path: tagclass_0_0.csv
-        format: standard_csv
+      - tagclass_0_0.csv
   - type_name: TAG
     inputs:
-      - path: tag_0_0.csv
-        format: standard_csv
+      - tag_0_0.csv
 edge_mappings:
   - type_triplet: 
       edge: HASCREATOR
       source_vertex: COMMENT
       destination_vertex: PERSON
     inputs:
-      - path: comment_hasCreator_person_0_0.csv
-        format: standard_csv
+      - comment_hasCreator_person_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: HASCREATOR
       source_vertex: POST
       destination_vertex: PERSON
     inputs:
-      - path: post_hasCreator_person_0_0.csv
-        format: standard_csv
+      - post_hasCreator_person_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: HASTAG
       source_vertex: POST
       destination_vertex: TAG
     inputs:
-      - path: post_hasTag_tag_0_0.csv
-        format: standard_csv
+      - post_hasTag_tag_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: REPLYOF
       source_vertex: COMMENT
       destination_vertex: COMMENT
     inputs:
-      - path: comment_replyOf_comment_0_0.csv
-        format: standard_csv
+      - comment_replyOf_comment_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: REPLYOF
       source_vertex: COMMENT
       destination_vertex: POST
     inputs:
-      - path: comment_replyOf_post_0_0.csv
-        format: standard_csv
+      - comment_replyOf_post_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: CONTAINEROF
       source_vertex: FORUM
       destination_vertex: POST
     inputs:
-      - path: forum_containerOf_post_0_0.csv
-        format: standard_csv
+      - forum_containerOf_post_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: HASMEMBER
       source_vertex: FORUM
       destination_vertex: PERSON
     inputs:
-      - path: forum_hasMember_person_0_0.csv
-        format: standard_csv
+      - forum_hasMember_person_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: HASMODERATOR
       source_vertex: FORUM
       destination_vertex: PERSON
     inputs:
-      - path: forum_hasModerator_person_0_0.csv
-        format: standard_csv
+      - forum_hasModerator_person_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: HASINTEREST
       source_vertex: PERSON
       destination_vertex: TAG
     inputs:
-      - path: person_hasInterest_tag_0_0.csv
-        format: standard_csv
+      - person_hasInterest_tag_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: ISLOCATEDIN
       source_vertex: COMMENT
       destination_vertex: PLACE
     inputs:
-      - path: comment_isLocatedIn_place_0_0.csv
-        format: standard_csv
+      - comment_isLocatedIn_place_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: ISLOCATEDIN
       source_vertex: PERSON
       destination_vertex: PLACE
     inputs:
-      - path: person_isLocatedIn_place_0_0.csv
-        format: standard_csv
+      - person_isLocatedIn_place_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: ISLOCATEDIN
       source_vertex: POST
       destination_vertex: PLACE
     inputs:
-      - path: post_isLocatedIn_place_0_0.csv
-        format: standard_csv
+      - post_isLocatedIn_place_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: ISLOCATEDIN
       source_vertex: ORGANISATION
       destination_vertex: PLACE
     inputs:
-      - path: organisation_isLocatedIn_place_0_0.csv
-        format: standard_csv
+      - organisation_isLocatedIn_place_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: KNOWS
       source_vertex: PERSON
       destination_vertex: PERSON
     inputs:
-      - path: person_knows_person_0_0.csv
-        format: standard_csv
+      - person_knows_person_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: LIKES
       source_vertex: PERSON
       destination_vertex: COMMENT
     inputs:
-      - path: person_likes_comment_0_0.csv
-        format: standard_csv
+      - person_likes_comment_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
     column_mappings:
       - column:
           index: 2
@@ -274,16 +252,15 @@ edge_mappings:
       source_vertex: PERSON
       destination_vertex: POST
     inputs:
-      - path: person_likes_post_0_0.csv
-        format: standard_csv
+      - person_likes_post_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
     column_mappings:
       - column:
           index: 2
@@ -294,16 +271,15 @@ edge_mappings:
       source_vertex: PERSON
       destination_vertex: ORGANISATION
     inputs:
-      - path: person_workAt_organisation_0_0.csv
-        format: standard_csv
+      - person_workAt_organisation_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
     column_mappings:
       - column:
           index: 2
@@ -314,61 +290,57 @@ edge_mappings:
       source_vertex: PLACE
       destination_vertex: PLACE
     inputs:
-      - path: place_isPartOf_place_0_0.csv
-        format: standard_csv
+      - place_isPartOf_place_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: HASTYPE
       source_vertex: TAG
       destination_vertex: TAGCLASS
     inputs:
-      - path: tag_hasType_tagclass_0_0.csv
-        format: standard_csv
+      - tag_hasType_tagclass_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: ISSUBCLASSOF
       source_vertex: TAGCLASS
       destination_vertex: TAGCLASS
     inputs:
-      - path: tagclass_isSubclassOf_tagclass_0_0.csv
-        format: standard_csv
+      - tagclass_isSubclassOf_tagclass_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
   - type_triplet:
       edge: STUDYAT
       source_vertex: PERSON
       destination_vertex: ORGANISATION
     inputs:
-      - path: person_studyAt_organisation_0_0.csv
-        format: standard_csv
+      - person_studyAt_organisation_0_0.csv
     source_vertex_mappings:
       - column:
           index: 0
-          name: src_id
+          name: id
     destination_vertex_mappings:
       - column:
           index: 1
-          name: dst_id
+          name: id
     column_mappings:
       - column:
           index: 2
