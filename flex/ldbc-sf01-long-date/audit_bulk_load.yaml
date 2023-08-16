@@ -54,11 +54,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: HASCREATOR
       source_vertex: POST
@@ -74,11 +69,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: HASTAG
       source_vertex: POST
@@ -94,11 +84,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: REPLYOF
       source_vertex: COMMENT
@@ -114,11 +99,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: REPLYOF
       source_vertex: COMMENT
@@ -134,11 +114,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: CONTAINEROF
       source_vertex: FORUM
@@ -154,11 +129,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: HASMEMBER
       source_vertex: FORUM
@@ -174,11 +144,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: HASMODERATOR
       source_vertex: FORUM
@@ -194,11 +159,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: HASINTEREST
       source_vertex: PERSON
@@ -214,11 +174,6 @@ edge_mappings:
       - column:
           index: 1
           name: dst_id
-    column_mappings:
-      - column:
-          index: 2
-          name: weight
-        property: weight
   - type_triplet:
       edge: ISLOCATEDIN
       source_vertex: COMMENT
