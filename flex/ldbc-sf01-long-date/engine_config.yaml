@@ -1,0 +1,30 @@
+directories:
+  workspace: /tmp/interactive_workspace
+  subdirs:
+    data: data
+    logs: logs
+    conf: conf
+log_level: INFO
+default_graph: ldbc
+compute_engine:
+  type: hiactor
+  hosts:
+    - localhost:10000
+  shard_num: 1
+compiler:
+  planner:
+    is_on: true
+    opt: RBO
+    rules:
+      - FilterMatchRule
+      - FilterIntoJoinRule
+      - NotExistToAntiJoinRule
+  endpoint:
+    default_listen_address: localhost
+    bolt_connector:
+      disabled: false
+      port: 7687
+    gremlin_connector:
+      disabled: true
+      port: 8182
+  query_timeout: 30000

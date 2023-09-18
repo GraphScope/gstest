@@ -51,7 +51,7 @@ schema:
         - property_id: 4
           property_name: birthday
           property_type:
-            primitive_type: DT_SIGNED_INT64
+            date: "date"
         - property_id: 5
           property_name: creationDate
           property_type:

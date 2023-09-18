@@ -83,7 +83,7 @@
                         "id": 14,
                         "name": "birthday"
                     },
-                    "data_type": 2,
+                    "data_type": 12,
                     "is_primary_key": false
                 },
                 {
