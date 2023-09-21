@@ -18,7 +18,7 @@ compiler:
     rules:
       - FilterMatchRule
       - FilterIntoJoinRule
-      - NotExistToAntiJoinRule
+      - NotMatchToAntiJoinRule
   endpoint:
     default_listen_address: localhost
     bolt_connector:
