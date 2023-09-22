@@ -292,15 +292,23 @@ schema:
         - source_vertex: COMMENT
           destination_vertex: PLACE
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
         - source_vertex: PERSON
           destination_vertex: PLACE
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
         - source_vertex: POST
           destination_vertex: PLACE
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
         - source_vertex: ORGANISATION
           destination_vertex: PLACE
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 8
       type_name: KNOWS
       vertex_type_pair_relations:
