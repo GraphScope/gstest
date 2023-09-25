@@ -16,8 +16,8 @@ compiler:
     is_on: true
     opt: RBO
     rules:
-      - FilterMatchRule
       - FilterIntoJoinRule
+      - FilterMatchRule
       - NotMatchToAntiJoinRule
   endpoint:
     default_listen_address: localhost
