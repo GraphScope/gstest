@@ -227,15 +227,17 @@ schema:
   edge_types:
     - type_id: 0
       type_name: HASCREATOR
-      x_csr_params:
-        outgoing_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: COMMENT
           destination_vertex: PERSON
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
         - source_vertex: POST
           destination_vertex: PERSON
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 1
       type_name: HASTAG
       vertex_type_pair_relations:
@@ -244,23 +246,25 @@ schema:
           relation: MANY_TO_ONE
     - type_id: 2
       type_name: REPLYOF
-      x_csr_params:
-        outgoing_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: COMMENT
           destination_vertex: COMMENT
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
         - source_vertex: COMMENT
           destination_vertex: POST
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 3
       type_name: CONTAINEROF
-      x_csr_params:
-        incoming_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: FORUM
           destination_vertex: POST
           relation: MANY_TO_ONE
+          x_csr_params:
+            incoming_edge_strategy: Single
     - type_id: 4
       type_name: HASMEMBER
       vertex_type_pair_relations:
@@ -274,12 +278,12 @@ schema:
             primitive_type: DT_SIGNED_INT64
     - type_id: 5
       type_name: HASMODERATOR
-      x_csr_params:
-        outgoing_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: FORUM
           destination_vertex: PERSON
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 6
       type_name: HASINTEREST
       vertex_type_pair_relations:
@@ -347,28 +351,28 @@ schema:
             primitive_type: DT_SIGNED_INT32
     - type_id: 11
       type_name: ISPARTOF
-      x_csr_params:
-        outgoing_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: PLACE
           destination_vertex: PLACE
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 12
       type_name: HASTYPE
-      x_csr_params:
-        outgoing_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: TAG
           destination_vertex: TAGCLASS
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 13
       type_name: ISSUBCLASSOF
-      x_csr_params:
-        outgoing_edge_strategy: Single
       vertex_type_pair_relations:
         - source_vertex: TAGCLASS
           destination_vertex: TAGCLASS
           relation: MANY_TO_ONE
+          x_csr_params:
+            outgoing_edge_strategy: Single
     - type_id: 14
       type_name: STUDYAT
       vertex_type_pair_relations:
