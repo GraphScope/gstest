@@ -1,0 +1,61 @@
+{
+  "vertex_type_map": {
+    "Movie": 0,
+    "Person": 1
+  },
+  "edge_type_map": {
+    "ACTED_IN": 0,
+    "DIRECTED": 1,
+    "FOLLOWS": 3,
+    "PRODUCED": 5,
+    "REVIEW": 2,
+    "WROTE": 4
+  },
+  "vertex_prop": {
+    "Movie": [
+      [
+        "id",
+        "ID"
+      ],
+      [
+        "released",
+        "Integer"
+      ],
+      [
+        "tagline",
+        "String"
+      ],
+      [
+        "title",
+        "String"
+      ]
+    ],
+    "Person": [
+      [
+        "id",
+        "ID"
+      ],
+      [
+        "born",
+        "Integer"
+      ],
+      [
+        "name",
+        "String"
+      ]
+    ]
+  },
+  "edge_prop": {
+    "ACTED_IN": [],
+    "DIRECTED": [],
+    "FOLLOWS": [],
+    "PRODUCED": [],
+    "REVIEW": [
+      [
+        "rating",
+        "Integer"
+      ]
+    ],
+    "WROTE": []
+  }
+}
