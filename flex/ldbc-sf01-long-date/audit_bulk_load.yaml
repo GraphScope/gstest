@@ -1,161 +1,350 @@
-graph:
-  vertex:
-    - label_name: PLACE
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/place_0_0.csv
-          format: standard_csv
-    - label_name: PERSON
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_0_0.csv
-          format: standard_csv
-    - label_name: COMMENT
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_0_0.csv
-          format: standard_csv
-    - label_name: POST
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_0_0.csv
-          format: standard_csv
-    - label_name: FORUM
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_0_0.csv
-          format: standard_csv
-    - label_name: ORGANISATION
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/organisation_0_0.csv
-          format: standard_csv
-    - label_name: TAGCLASS
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tagclass_0_0.csv
-          format: standard_csv
-    - label_name: TAG
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tag_0_0.csv
-          format: standard_csv
-  edge:
-    - src_label_name: COMMENT
-      dst_label_name: PERSON
-      edge_label_name: HASCREATOR
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_hasCreator_person_0_0.csv
-          format: standard_csv
-    - src_label_name: POST
-      dst_label_name: PERSON
-      edge_label_name: HASCREATOR
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_hasCreator_person_0_0.csv
-          format: standard_csv
-    - src_label_name: POST
-      dst_label_name: TAG
-      edge_label_name: HASTAG
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_hasTag_tag_0_0.csv
-          format: standard_csv
-    - src_label_name: COMMENT
-      dst_label_name: COMMENT
-      edge_label_name: REPLYOF
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_replyOf_comment_0_0.csv
-          format: standard_csv
-    - src_label_name: COMMENT
-      dst_label_name: POST
-      edge_label_name: REPLYOF
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_replyOf_post_0_0.csv
-          format: standard_csv
-    - src_label_name: FORUM
-      dst_label_name: POST
-      edge_label_name: CONTAINEROF
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_containerOf_post_0_0.csv
-          format: standard_csv
-    - src_label_name: FORUM
-      dst_label_name: PERSON
-      edge_label_name: HASMEMBER
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_hasMember_person_0_0.csv
-          format: standard_csv
-    - src_label_name: FORUM
-      dst_label_name: PERSON
-      edge_label_name: HASMODERATOR
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/forum_hasModerator_person_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: TAG
-      edge_label_name: HASINTEREST
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_hasInterest_tag_0_0.csv
-          format: standard_csv
-    - src_label_name: COMMENT
-      dst_label_name: PLACE
-      edge_label_name: ISLOCATEDIN
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/comment_isLocatedIn_place_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: PLACE
-      edge_label_name: ISLOCATEDIN
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_isLocatedIn_place_0_0.csv
-          format: standard_csv
-    - src_label_name: POST
-      dst_label_name: PLACE
-      edge_label_name: ISLOCATEDIN
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/post_isLocatedIn_place_0_0.csv
-          format: standard_csv
-    - src_label_name: ORGANISATION
-      dst_label_name: PLACE
-      edge_label_name: ISLOCATEDIN
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/organisation_isLocatedIn_place_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: PERSON
-      edge_label_name: KNOWS
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_knows_person_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: COMMENT
-      edge_label_name: LIKES
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_likes_comment_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: POST
-      edge_label_name: LIKES
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_likes_post_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: ORGANISATION
-      edge_label_name: WORKAT
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_workAt_organisation_0_0.csv
-          format: standard_csv
-    - src_label_name: PLACE
-      dst_label_name: PLACE
-      edge_label_name: ISPARTOF
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/place_isPartOf_place_0_0.csv
-          format: standard_csv
-    - src_label_name: TAG
-      dst_label_name: TAGCLASS
-      edge_label_name: HASTYPE
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tag_hasType_tagclass_0_0.csv
-          format: standard_csv
-    - src_label_name: TAGCLASS
-      dst_label_name: TAGCLASS
-      edge_label_name: ISSUBCLASSOF
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/tagclass_isSubclassOf_tagclass_0_0.csv
-          format: standard_csv
-    - src_label_name: PERSON
-      dst_label_name: ORGANISATION
-      edge_label_name: STUDYAT
-      files:
-        - path: /workspaces/gstest/flex/ldbc-sf01-long-date/person_studyAt_organisation_0_0.csv
-          format: standard_csv
+graph: ldbc_snb
+loading_config:
+  data_source:
+    scheme: file  # file, oss, s3, hdfs; only file is supported now
+    #  location: # specify it or use FLEX_DATA_DIR env.
+  import_option: init # append, overwrite, only init is supported now
+  format:
+    type: csv
+    metadata:
+      delimiter: "|"  # other loading configuration places here
+vertex_mappings:
+  - type_name: PLACE
+    inputs:
+      - place_0_0.csv
+  - type_name: PERSON 
+    inputs:
+      - person_0_0.csv
+  - type_name: COMMENT
+    inputs:
+      - comment_0_0.csv
+  - type_name: POST
+    inputs:
+      - post_0_0.csv
+  - type_name: FORUM
+    inputs:
+      - forum_0_0.csv
+  - type_name: ORGANISATION
+    inputs:
+      - organisation_0_0.csv
+  - type_name: TAGCLASS
+    inputs:
+      - tagclass_0_0.csv
+  - type_name: TAG
+    inputs:
+      - tag_0_0.csv
+edge_mappings:
+  - type_triplet: 
+      edge: HASCREATOR
+      source_vertex: COMMENT
+      destination_vertex: PERSON
+    inputs:
+      - comment_hasCreator_person_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASCREATOR
+      source_vertex: POST
+      destination_vertex: PERSON
+    inputs:
+      - post_hasCreator_person_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASTAG
+      source_vertex: POST
+      destination_vertex: TAG
+    inputs:
+      - post_hasTag_tag_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: REPLYOF
+      source_vertex: COMMENT
+      destination_vertex: COMMENT
+    inputs:
+      - comment_replyOf_comment_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: REPLYOF
+      source_vertex: COMMENT
+      destination_vertex: POST
+    inputs:
+      - comment_replyOf_post_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: CONTAINEROF
+      source_vertex: FORUM
+      destination_vertex: POST
+    inputs:
+      - forum_containerOf_post_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASMEMBER
+      source_vertex: FORUM
+      destination_vertex: PERSON
+    inputs:
+      - forum_hasMember_person_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASMODERATOR
+      source_vertex: FORUM
+      destination_vertex: PERSON
+    inputs:
+      - forum_hasModerator_person_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASINTEREST
+      source_vertex: PERSON
+      destination_vertex: TAG
+    inputs:
+      - person_hasInterest_tag_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: ISLOCATEDIN
+      source_vertex: COMMENT
+      destination_vertex: PLACE
+    inputs:
+      - comment_isLocatedIn_place_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: ISLOCATEDIN
+      source_vertex: PERSON
+      destination_vertex: PLACE
+    inputs:
+      - person_isLocatedIn_place_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: ISLOCATEDIN
+      source_vertex: POST
+      destination_vertex: PLACE
+    inputs:
+      - post_isLocatedIn_place_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: ISLOCATEDIN
+      source_vertex: ORGANISATION
+      destination_vertex: PLACE
+    inputs:
+      - organisation_isLocatedIn_place_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: KNOWS
+      source_vertex: PERSON
+      destination_vertex: PERSON
+    inputs:
+      - person_knows_person_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: LIKES
+      source_vertex: PERSON
+      destination_vertex: COMMENT
+    inputs:
+      - person_likes_comment_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+    column_mappings:
+      - column:
+          index: 2
+          name: creationDate
+        property: creationDate
+  - type_triplet:
+      edge: LIKES
+      source_vertex: PERSON
+      destination_vertex: POST
+    inputs:
+      - person_likes_post_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+    column_mappings:
+      - column:
+          index: 2
+          name: creationDate
+        property: creationDate
+  - type_triplet:
+      edge: WORKAT
+      source_vertex: PERSON
+      destination_vertex: ORGANISATION
+    inputs:
+      - person_workAt_organisation_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+    column_mappings:
+      - column:
+          index: 2
+          name: workFrom
+        property: workFrom
+  - type_triplet:
+      edge: ISPARTOF
+      source_vertex: PLACE
+      destination_vertex: PLACE
+    inputs:
+      - place_isPartOf_place_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASTYPE
+      source_vertex: TAG
+      destination_vertex: TAGCLASS
+    inputs:
+      - tag_hasType_tagclass_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: ISSUBCLASSOF
+      source_vertex: TAGCLASS
+      destination_vertex: TAGCLASS
+    inputs:
+      - tagclass_isSubclassOf_tagclass_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: STUDYAT
+      source_vertex: PERSON
+      destination_vertex: ORGANISATION
+    inputs:
+      - person_studyAt_organisation_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+    column_mappings:
+      - column:
+          index: 2
+          name: classYear
+        property: classYear
