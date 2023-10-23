@@ -19,6 +19,9 @@ vertex_mappings:
   - type_name: Person  # must align with the schema
     inputs:
       - Person.csv
+  - type_name: User
+    inputs:
+      - User.csv
   - type_name: Movie
     inputs:
       - Movie.csv
@@ -53,7 +56,7 @@ edge_mappings:
       - DIRECTED.csv
   - type_triplet:
       edge: FOLLOWS
-      source_vertex:  Person
+      source_vertex:  User
       destination_vertex:  Person
     source_vertex_mappings:
       - column:
@@ -81,7 +84,7 @@ edge_mappings:
       - PRODUCED.csv
   - type_triplet:
       edge: REVIEW
-      source_vertex:  Person
+      source_vertex:  User
       destination_vertex:  Movie
     source_vertex_mappings:
       - column:
