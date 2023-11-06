@@ -8,9 +8,8 @@ log_level: INFO
 default_graph: ldbc
 compute_engine:
   type: hiactor
-  workers:
+  hosts:
     - localhost:10000
-  admin_endpoint: localhost:7777
   shard_num: 1
 compiler:
   planner:
