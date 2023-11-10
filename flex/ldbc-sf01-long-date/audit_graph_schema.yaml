@@ -355,8 +355,6 @@ schema:
         - source_vertex: PLACE
           destination_vertex: PLACE
           relation: MANY_TO_ONE
-          x_csr_params:
-            outgoing_edge_strategy: Single
     - type_id: 12
       type_name: HASTYPE
       vertex_type_pair_relations:
