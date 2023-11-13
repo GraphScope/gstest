@@ -1,0 +1,63 @@
+graph: type_test
+loading_config:
+  data_source:
+    scheme: file  # file, oss, s3, hdfs; only file is supported now
+  import_option: init # append, overwrite, only init is supported now
+  format:
+    type: csv
+    metadata:
+      delimiter: "|"  # other loading configuration places here
+      header_row: true # whether to use the first row as the header
+vertex_mappings:
+  - type_name: Vertex  # must align with the schema
+    inputs:
+      - Vertex.csv
+edge_mappings:
+  - type_triplet:
+      edge: Edge1
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge1.csv
+  - type_triplet:
+      edge: Edge2
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge2.csv
+  - type_triplet:
+      edge: Edge3
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge3.csv
+  - type_triplet:
+      edge: Edge4
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge4.csv
+  - type_triplet:
+      edge: Edge5
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge5.csv
+  - type_triplet:
+      edge: Edge6
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge6.csv
+  - type_triplet:
+      edge: Edge7
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge7.csv
+  - type_triplet:
+      edge: Edge8
+      source_vertex:  Vertex
+      destination_vertex:  Vertex
+    inputs:
+      - Edge8.csv
