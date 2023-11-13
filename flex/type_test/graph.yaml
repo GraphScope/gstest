@@ -1,0 +1,133 @@
+name: type_test
+schema:
+  vertex_types:
+    - type_id: 0
+      type_name: Vertex
+      properties:
+        - property_id: 0
+          property_name: int64Property
+          property_type:
+            primitive_type: DT_SIGNED_INT64
+        - property_id: 1
+          property_name: int32Property
+          property_type:
+            primitive_type: DT_SIGNED_INT32
+        - property_id: 2
+          property_name: uint64Property
+          property_type:
+            primitive_type: DT_UNSIGNED_INT64
+        - property_id: 3
+          property_name: uint32Property
+          property_type:
+            primitive_type: DT_UNSIGNED_INT32
+        - property_id: 4
+          property_name: stringProperty
+          property_type:
+            primitive_type: DT_STRING
+        - property_id: 6
+          property_name: boolProperty
+          property_type:
+            primitive_type: DT_BOOL
+        - property_id: 6
+          property_name: floatProperty
+          property_type:
+            primitive_type: DT_FLOAT
+        - property_id: 7
+          property_name: doubleProperty
+          property_type: 
+            primitive_type: DT_DOUBLE
+        - property_id: 8
+          property_name: dateProperty
+          property_type: 
+            primitive_type: DT_DATE32
+      primary_keys:
+        - uint64Property
+  edge_types:
+    - type_id: 0
+      type_name: Edge1
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: MANY_TO_MANY
+      properties:
+        - property_id: 0
+          property_name: int64Property
+          property_type:
+            primitive_type: DT_SIGNED_INT64
+    - type_id: 1
+      type_name: Edge2
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: ONE_TO_MANY
+      properties:
+        - property_id: 0
+          property_name: int32Property
+          property_type:
+            primitive_type: DT_SIGNED_INT32
+    - type_id: 2
+      type_name: Edge3
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: ONE_TO_ONE
+      properties:
+        - property_id: 0
+          property_name: uint64Property
+          property_type:
+            primitive_type: DT_UNSIGNED_INT64
+    - type_id: 3
+      type_name: Edge4
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: MANY_TO_ONE
+      properties:
+        - property_id: 0
+          property_name: uint32Property
+          property_type:
+            primitive_type: DT_UNSIGNED_INT32
+    - type_id: 4
+      type_name: Edge5
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: ONE_TO_ONE
+      properties:
+        - property_id: 0
+          property_name: boolProperty
+          property_type:
+            primitive_type: DT_BOOL
+    - type_id: 5
+      type_name: Edge6
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: ONE_TO_ONE
+      properties:
+        - property_id: 0
+          property_name: floatProperty
+          property_type:
+            primitive_type: DT_FLOAT
+    - type_id: 6
+      type_name: Edge7
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: ONE_TO_ONE
+      properties:
+        - property_id: 0
+          property_name: doubleProperty
+          property_type:
+            primitive_type: DT_DOUBLE
+    - type_id: 7
+      type_name: Edge8
+      vertex_type_pair_relations:
+        - source_vertex: Vertex
+          destination_vertex: Vertex
+          relation: ONE_TO_ONE
+      properties:
+        - property_id: 0
+          property_name: dateProperty
+          property_type:
+            primitive_type: DT_DATE32
