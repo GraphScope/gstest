@@ -239,7 +239,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: POST
           destination_vertex: TAG
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
     - type_id: 2
       type_name: REPLYOF
       vertex_type_pair_relations:
@@ -254,13 +254,13 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: FORUM
           destination_vertex: POST
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
     - type_id: 4
       type_name: HASMEMBER
       vertex_type_pair_relations:
         - source_vertex: FORUM
           destination_vertex: PERSON
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
       properties:
         - property_id: 0
           property_name: joinDate
@@ -277,7 +277,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: PERSON
           destination_vertex: TAG
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
     - type_id: 7
       type_name: ISLOCATEDIN
       vertex_type_pair_relations:
@@ -298,7 +298,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: PERSON
           destination_vertex: PERSON
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
       properties:
         - property_id: 0
           property_name: creationDate
