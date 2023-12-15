@@ -254,7 +254,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: FORUM
           destination_vertex: POST
-          relation: MANY_TO_MANY
+          relation: ONE_TO_MANY
     - type_id: 4
       type_name: HASMEMBER
       vertex_type_pair_relations:
