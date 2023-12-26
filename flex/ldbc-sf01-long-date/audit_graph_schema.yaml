@@ -245,7 +245,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: COMMENT
           destination_vertex: COMMENT
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
         - source_vertex: COMMENT
           destination_vertex: POST
           relation: MANY_TO_ONE
@@ -334,7 +334,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: PLACE
           destination_vertex: PLACE
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
     - type_id: 12
       type_name: HASTYPE
       vertex_type_pair_relations:
@@ -346,7 +346,7 @@ schema:
       vertex_type_pair_relations:
         - source_vertex: TAGCLASS
           destination_vertex: TAGCLASS
-          relation: MANY_TO_ONE
+          relation: MANY_TO_MANY
     - type_id: 14
       type_name: STUDYAT
       vertex_type_pair_relations:
