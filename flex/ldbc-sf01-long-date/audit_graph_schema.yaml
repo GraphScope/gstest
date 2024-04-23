@@ -240,6 +240,12 @@ schema:
         - source_vertex: POST
           destination_vertex: TAG
           relation: MANY_TO_MANY
+        - source_vertex: FORUM
+          destination_vertex: TAG
+          relation: MANY_TO_MANY
+        - source_vertex: COMMENT
+          destination_vertex: TAG
+          relation: MANY_TO_MANY
     - type_id: 2
       type_name: REPLYOF
       vertex_type_pair_relations:
