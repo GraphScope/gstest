@@ -1,7 +1,5 @@
 name: ldbc_snb
 store_type: mutable_csr
-stored_procedures:
-  directory: plugins
 schema:
   vertex_types:
     - type_id: 0
@@ -16,15 +14,18 @@ schema:
         - property_id: 1
           property_name: name
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: url
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 3
           property_name: type
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
       primary_keys:
         - id
     - type_id: 1
@@ -39,19 +40,23 @@ schema:
         - property_id: 1
           property_name: firstName
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: lastName
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 3
           property_name: gender
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 4
           property_name: birthday
           property_type:
-            primitive_type: DT_DATE32
+            temporal:
+              date32:
         - property_id: 5
           property_name: creationDate
           property_type:
@@ -59,19 +64,23 @@ schema:
         - property_id: 6
           property_name: locationIP
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 7
           property_name: browserUsed
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 8
           property_name: language
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 9
           property_name: email
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
       primary_keys:
         - id
     - type_id: 2
@@ -90,15 +99,18 @@ schema:
         - property_id: 2
           property_name: locationIP
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 3
           property_name: browserUsed
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 4
           property_name: content
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 5
           property_name: length
           property_type:
@@ -117,7 +129,8 @@ schema:
         - property_id: 1
           property_name: imageFile
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: creationDate
           property_type:
@@ -125,19 +138,23 @@ schema:
         - property_id: 3
           property_name: locationIP
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 4
           property_name: browserUsed
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 5
           property_name: language
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 6
           property_name: content
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 7
           property_name: length
           property_type:
@@ -156,7 +173,8 @@ schema:
         - property_id: 1
           property_name: title
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: creationDate
           property_type:
@@ -175,15 +193,18 @@ schema:
         - property_id: 1
           property_name: type
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: name
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 3
           property_name: url
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
       primary_keys:
         - id
     - type_id: 6
@@ -198,11 +219,13 @@ schema:
         - property_id: 1
           property_name: name
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: url
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
       primary_keys:
         - id
     - type_id: 7
@@ -217,11 +240,13 @@ schema:
         - property_id: 1
           property_name: name
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
         - property_id: 2
           property_name: url
           property_type:
-            primitive_type: DT_STRING
+            string:
+              long_text:
       primary_keys:
         - id
   edge_types:
