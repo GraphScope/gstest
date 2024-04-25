@@ -56,7 +56,7 @@ schema:
           property_name: birthday
           property_type:
             temporal:
-              date32:
+              timestamp:
         - property_id: 5
           property_name: creationDate
           property_type:
