@@ -77,6 +77,34 @@ edge_mappings:
           index: 1
           name: id
   - type_triplet:
+      edge: HASTAG
+      source_vertex: FORUM
+      destination_vertex: TAG
+    inputs:
+      - forum_hasTag_tag_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
+      edge: HASTAG
+      source_vertex: COMMENT
+      destination_vertex: TAG
+    inputs:
+      - comment_hasTag_tag_0_0.csv
+    source_vertex_mappings:
+      - column:
+          index: 0
+          name: id
+    destination_vertex_mappings:
+      - column:
+          index: 1
+          name: id
+  - type_triplet:
       edge: REPLYOF
       source_vertex: COMMENT
       destination_vertex: COMMENT
