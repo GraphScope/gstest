@@ -96,7 +96,7 @@ edge_mappings:
           name: id
     column_mappings:
       - column:
-          index: 3
+          index: 2
           name: rating
         property: rating
     inputs:
