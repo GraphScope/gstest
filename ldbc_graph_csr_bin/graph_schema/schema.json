@@ -159,7 +159,7 @@
       "oe_strategy": "Single"
     },
     {
-      "src_label": "POST",
+      "src_label": "FORUM",
       "dst_label": "TAG",
       "label": "HASTAG"
     },
@@ -169,7 +169,7 @@
       "label": "HASTAG"
     },
     {
-      "src_label": "FORUM",
+      "src_label": "POST",
       "dst_label": "TAG",
       "label": "HASTAG"
     },
@@ -181,13 +181,13 @@
     },
     {
       "src_label": "COMMENT",
-      "dst_label": "COMMENT",
+      "dst_label": "POST",
       "label": "REPLYOF",
       "oe_strategy": "Single"
     },
     {
       "src_label": "COMMENT",
-      "dst_label": "POST",
+      "dst_label": "COMMENT",
       "label": "REPLYOF",
       "oe_strategy": "Single"
     },
