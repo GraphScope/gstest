@@ -1,0 +1,1 @@
+SELECT f.f_title FROM person p1, knows k1, person p2, forum_person fp, forum f, post m WHERE f.f_forumid = m.m_ps_forumid AND fp.fp_forumid = f.f_forumid AND p2.p_personid = fp.fp_personid AND k1.k_person2id = p2.p_personid AND p1.p_personid = k1.k_person1id AND m.m_creatorid = p2.p_personid AND p1.p_personid = :personId AND fp.fp_joindate >= :minDate;

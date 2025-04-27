@@ -1,0 +1,5 @@
+personId|firstName
+INTEGER|VARCHAR
+933|Boris
+1129|Gustavo
+2199023256472|Deepak

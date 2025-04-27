@@ -1,0 +1,5 @@
+personId|tagName
+INTEGER|VARCHAR
+2199023256077|Perry_Como
+10995116278291|Bill_Clinton
+2199023256437|A_Rush_of_Blood_to_the_Head

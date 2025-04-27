@@ -1,0 +1,5 @@
+personId|tagName
+INTEGER|VARCHAR
+933|Perry_Como
+1129|A_Rush_of_Blood_to_the_Head
+2199023256684|Sammy_Sosa
