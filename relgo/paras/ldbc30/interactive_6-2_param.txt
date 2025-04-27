@@ -1,0 +1,10 @@
+personId|tagName
+INTEGER|VARCHAR
+4194|Jean_Chrétien
+20723|Mohandas_Karamchand_Gandhi
+21582|Michelangelo
+34318|Vladimir_Nabokov
+38098|William_Shakespeare
+45754|Fabrice_Santoro
+57880|Arnold_Schoenberg
+93444|Cleopatra_VII

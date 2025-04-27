@@ -1,0 +1,1 @@
+SELECT p2.p_firstname, p2.p_lastname, c.m_creationdate FROM person p1, knows k1, knows k2, person p2, comment_hascreator chc, comment c WHERE p2.p_personid = chc.chc_personid AND chc.chc_messageid = c.m_messageid AND k2.k_person2id = p2.p_personid AND k1.k_person2id = k2.k_person1id AND p1.p_personid = k1.k_person1id AND p1.p_personid = $personId AND c.m_creationdate < $maxDate;

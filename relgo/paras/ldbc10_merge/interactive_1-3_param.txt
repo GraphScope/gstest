@@ -1,0 +1,5 @@
+personId|firstName
+INTEGER|VARCHAR
+933|Rafael
+1129|Fredrik
+2199023256472|Salim Ahmed

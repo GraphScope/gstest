@@ -1,0 +1,1 @@
+SELECT p2.p_personid, p2.p_firstname, p2.p_lastname, c.m_messageid, c.m_content, c.m_creationdate FROM person p1, knows k, person p2, comment c WHERE p2.p_personid = c.m_creatorid AND c.m_creationdate < :maxDate AND k.k_person2id = p2.p_personid AND p1.p_personid = k.k_person1id AND p1.p_personid = :personId;

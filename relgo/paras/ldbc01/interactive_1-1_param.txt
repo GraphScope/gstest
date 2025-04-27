@@ -1,0 +1,5 @@
+personId|firstName
+INTEGER|VARCHAR
+933|Karl
+1129|Michal
+2199023256472|Jacques
