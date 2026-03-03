@@ -1,0 +1,2 @@
+SELECT t2.t_name FROM person p1, knows k1, knows k2, person p2, post_hascreator phc, post m, post_tag mt1, tag t1, post_tag mt2, tag t2 WHERE mt1.mt_tagid = t1.t_tagid AND m.m_messageid = mt1.mt_messageid AND mt2.mt_tagid = t2.t_tagid AND m.m_messageid = mt2.mt_messageid AND m.m_messageid = phc.phc_messageid AND phc.phc_personid = p2.p_personid AND 
+k2.k_person2id = p2.p_personid AND k2.k_person1id = k1.k_person2id AND p1.p_personid=k1.k_person1id AND p1.p_personid = $personId AND t1.t_name = $tagName AND t2.t_name <> $tagName;

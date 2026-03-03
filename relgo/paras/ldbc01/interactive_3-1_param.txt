@@ -1,0 +1,5 @@
+personId|startDate|durationDays|countryXName|countryYName
+INTEGER|INTEGER|INTEGER|VARCHAR|VARCHAR
+933|1346770795431|15|Turkey|Turkey
+1129|1340734349011|21|Brazil|Rwanda
+6597069767668|1276487034854|100|Niger|Finland

@@ -1,0 +1,53 @@
+personId|firstName
+INTEGER|VARCHAR
+1129|Shweta
+4194|John
+8333|Rahul
+8698|Sanjay
+8853|Amit
+10027|Meera
+11122|John
+14876|Aditya
+20415|Vinod
+20723|Meera
+21582|K.
+25675|Deepak
+27019|Amit
+27127|A. K.
+27625|Vinod
+30277|Amit
+31411|Arun
+31999|Rahul
+34318|John
+36675|Meera
+37217|Ashok
+38098|A. K.
+40004|Sanjay
+40105|K.
+40722|Abhishek
+41758|Rahul
+43518|K.
+43671|John
+45220|Arun
+45754|Sanjay
+46172|Amit
+46980|K.
+50585|Abhishek
+51239|A. K.
+53286|A. K.
+53433|Amit
+54488|Vinod
+57880|Abhishek
+66294|K.
+67663|John
+77762|Ashok
+80676|Amit
+84875|Arun
+90149|K.
+90569|Amit
+93444|K.
+94148|K.
+94682|Rahul
+94955|Anupam
+95197|K.
+97075|Amit

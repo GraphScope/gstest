@@ -1,0 +1,2 @@
+SELECT p2.p_personid, p2.p_firstname, p2.p_lastname, o.o_name, pc.pc_workfrom FROM person p1, knows k1, person p2, person_company pc, organisation o, org_islocatedin oi, place pl WHERE o.o_organisationid = oi.oi_organisationid AND oi.oi_placeid = pl.pl_placeid AND pc.pc_organisationid = o.o_organisationid AND p2.p_personid = pc.pc_personid AND k1.k_person2id = p2.p_personid AND p1.p_personid = k1.k_person1id AND p1.p_personid = $personId AND pc.pc_workfrom < $workFromYear AND pl.pl_name = $countryName;
+

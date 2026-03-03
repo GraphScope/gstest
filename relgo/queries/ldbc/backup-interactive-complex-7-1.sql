@@ -1,0 +1,1 @@
+SELECT p2.p_personid, p2.p_firstname, p2.p_lastname, l.l_creationdate, c.m_content FROM person p1, comment c, likes_comment l, person p2 WHERE p2.p_personid = l.l_personid AND c.m_messageid = l.l_messageid AND c.m_creatorid = p1.p_personid AND p1.p_personid = :personId;

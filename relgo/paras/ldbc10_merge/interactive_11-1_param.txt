@@ -1,0 +1,5 @@
+personId|countryName|workFromYear
+INTEGER|VARCHAR|INT
+933|Niger|2010
+1129|Germany|2010
+2199023256684|India|2010

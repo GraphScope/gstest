@@ -1,0 +1,5 @@
+personId|firstName
+INTEGER|VARCHAR
+933|Ion
+1129|Ivan
+40105|Ning

@@ -1,0 +1,5 @@
+personId|firstName
+INTEGER|VARCHAR
+933|Angel
+1129|Li
+8333|Nicolae

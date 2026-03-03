@@ -1,0 +1,2 @@
+SELECT t.t_name FROM knows k1, person p1, knows k2, person p2, post_hascreator phc, post ps,
+post_tag mt, tag t WHERE mt.mt_tagid = t.t_tagid AND ps.m_messageid = mt.mt_messageid AND mt.mt_messageid = phc.phc_messageid AND phc.phc_personid = p2.p_personid AND k2.k_person2id = p2.p_personid AND p1.p_personid = k2.k_person1id AND p1.p_personid = k1.k_person1id AND p1.p_personid = $personId AND ps.m_creationdate >= $startDate AND ps.m_creationdate < $durationDays;
